@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "ava test/index.test.js"
+  },
   "devDependencies": {
     "ava": "^0.25.0"
   }

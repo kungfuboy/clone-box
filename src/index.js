@@ -1,12 +1,12 @@
 function clone() {
-    function _copy(obj1, obj2) {
+    const _copy = (obj1, obj2) => {
         const _obj = Object.assign({}, obj1)
         for (let i in obj2) {
             if (typeof _obj[i] === typeof obj2[i]) {
                 if (typeof obj2[i] !== 'object') {
                     _obj[i] = obj2[i]
                 } else {
-                    _obj[i] = copy(_obj[i], obj2[i])
+                    _obj[i] = _copy(_obj[i], obj2[i])
                 }
             } else {
                 _obj[i] = obj2[i]
@@ -22,3 +22,5 @@ function clone() {
     }
     return _args[0]
 }
+
+module.exports = clone
